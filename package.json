@@ -9,9 +9,14 @@
   "author": "Joe Eames",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
     "babel-core": "^6.2.0",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.1.18",
+    "eslint": "^7.6.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-vue": "^6.2.2",
     "node-libs-browser": "^0.5.3",
     "webpack": "^4.44.1"
   }

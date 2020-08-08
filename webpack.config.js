@@ -5,11 +5,18 @@ module.exports = {
     },
     watch: true,
     module: {
+        
         rules: [
             {
                 test: /\.es6$/, // WHat kind of files to run through these loader
                 exclude: /node_modules/, // exclude node mdules
                 loader: "babel-loader"  // name of the loader
+            },
+            {
+                test: /\.js/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader'
+
             }
         ]
     },
