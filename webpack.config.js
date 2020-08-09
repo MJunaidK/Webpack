@@ -1,7 +1,15 @@
+var path = require('path');
 module.exports = {
-    entry: ["./utils.js","./app.js"],
+    context: path.resolve('js'), //sets the relative root directory for the entry key.
+    entry: ["./utils.js","./app.js"], 
     output: {
-        filename: "bundle.js"
+        path: path.resolve('build/js/'), // Tells webpack to put bundle.js into the build directory into the js subdirectory.
+        publicPath: '/public/assets/js',  // directory where bundle file will be on webserver,where the bundle.js file is going to be served up from on the web server
+        filename: "bundle.js" // contents of build/js are actually going to be requested through the web server from public/assets/js    
+                           // Request coming in for /public/assets/js will look for that file inside build/js
+    },
+    devServer: {
+        contentBase: 'public' // Any request from the root are going to come out of public and any request for public/assets/js are serve from build/js
     },
     watch: true,
     module: {
